@@ -1,0 +1,15 @@
+<p>
+  test-template works!
+</p>
+
+<div (click)="append1()" >append1</div>
+<div (click)="append2()" >append2</div>
+
+<ng-template #template let-data let-value="value" >
+   {{ data }} - {{ value }}
+</ng-template>
+
+<div></div>
+<ng-container #container1 ></ng-container>
+<ng-container #container2 ></ng-container>
+<div></div>
