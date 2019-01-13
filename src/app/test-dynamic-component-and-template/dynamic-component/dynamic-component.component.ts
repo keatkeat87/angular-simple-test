@@ -26,6 +26,7 @@ export class DynamicComponentComponent implements OnInit {
   add() {
     let factory = this.componentFactoryResolver.resolveComponentFactory(AbcComponent);
     const component =  factory.create(this.injector);
+    console.log(component);
     component.changeDetectorRef.detectChanges();
     // this.viewContainerRef.insert(component.hostView, 0);
   }

@@ -9,7 +9,7 @@ import { Component, OnInit, ChangeDetectionStrategy, ChangeDetectorRef, ViewChil
   styleUrls: ['./test-simple.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class TestSimpleComponent implements OnInit, AfterViewInit {
+export class TestSimpleComponent implements OnInit {
 
   constructor(
     private cdr: ChangeDetectorRef,
@@ -19,21 +19,9 @@ export class TestSimpleComponent implements OnInit, AfterViewInit {
 
   }
 
-  show = true;
-  yeah = 'dada';
   ngOnInit() {
-    setTimeout(() => {
-      this.show = false;
-      this.cdr.markForCheck();
-    }, 3000);
   }
 
-  ngAfterViewInit() {
-    document.getElementById('dada').addEventListener('blur', () => {
-      console.log('done');
-      this.yeah = 'tata';
-      Promise.resolve().then(() => this.cdr.markForCheck()); 
-    });
-  }
+ 
 
 }
