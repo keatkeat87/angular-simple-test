@@ -1,5 +1,8 @@
-<div>student1</div>
-<div>student2</div>
-<div>student3</div>
-<div>student4</div>
+
+
+<div *ngFor="let data of [1,2,3]" >
+    <input #input type="text"  >
+    <button (click)="log(input.value)" >submit</button>
+</div>
 <router-outlet></router-outlet>
+

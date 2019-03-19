@@ -9,6 +9,8 @@ import { AbcComponent } from './abc/abc.component';
 import { PortalModule } from '@angular/cdk/portal';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { DynamicComponentComponent } from './dynamic-component/dynamic-component.component';
+import { TemplateForComponent } from './template-for/template-for.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,9 +18,11 @@ import { DynamicComponentComponent } from './dynamic-component/dynamic-component
     TestTemplateComponent,
     CdkComponentPortalComponent,
     AbcComponent,
-    DynamicComponentComponent
+    DynamicComponentComponent,
+    TemplateForComponent
   ],
   imports: [
+    CommonModule,
     TestDynamicComponentAndTemplateRoutingModule,
     PortalModule,
     OverlayModule,

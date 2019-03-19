@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'test-css-vs-template' },
+    { path: '', pathMatch: 'full', redirectTo: 'test-dynamic-component-and-template' },
     { path: 'form', loadChildren: './form/form.module#FormModule' },
     { path: 'test-loading-button', loadChildren: './test-loading-button/test-loading-button.module#TestLoadingButtonModule' },
     { path: 'test-rxjs', loadChildren: './test-rxjs/test-rxjs.module#TestRxjsModule' },
@@ -25,7 +25,7 @@ const routes: Routes = [
     {
         path: 'test-immer',
         loadChildren: './test-immer/test-immer.module#TestImmerModule'
-    },  
+    },
     {
         path: 'test-checkbox-list-select',
         loadChildren: './test-checkbox-list-select/test-checkbox-list-select.module#TestCheckboxListSelectModule'

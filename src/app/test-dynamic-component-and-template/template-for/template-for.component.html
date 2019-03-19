@@ -1,0 +1,21 @@
+<p>
+  template-for works!
+</p>
+ 
+ 
+<ng-template #template let-item let-index="index" let-first="first" >
+   {{ item }}
+   {{ index }}
+   {{ first }}
+</ng-template>
+
+<ng-template ngFor [ngForOf]="['a','b','c']" [ngForTemplate]="template"></ng-template>
+
+
+
+<ng-template #template2 let-data="data" let-item >
+  {{ data }}
+  {{ item }}
+</ng-template>
+<ng-template [ngTemplateOutlet]="template2" [ngTemplateOutletContext]="{ data: 1, $implicit : 'da' }" ></ng-template>
+

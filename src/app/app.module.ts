@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HammerInstance } from '@angular/platform-browser/src/dom/events/hammer_gestures';
 
 import propagating from 'propagating-hammerjs';
+import { AbcDirective } from './abc.directive';
 
 export class StoogesHammerGestureConfig extends HammerGestureConfig {
   overrides = <any>{};
@@ -34,6 +35,7 @@ export class StoogesHammerGestureConfig extends HammerGestureConfig {
 @NgModule({
   declarations: [
     AppComponent,
+    AbcDirective,
   ],
   imports: [
     BrowserModule,

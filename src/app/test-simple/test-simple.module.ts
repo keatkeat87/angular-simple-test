@@ -4,10 +4,12 @@ import { TestSimpleRoutingModule } from './test-simple-routing.module';
 import { TestSimpleComponent } from './test-simple.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatSelectModule, MatFormFieldModule } from '@angular/material';
+import { MatSelectModule } from '@angular/material';
 
 @NgModule({
-  declarations: [TestSimpleComponent],
+  declarations: [
+    TestSimpleComponent
+  ],
   imports: [
     TestSimpleRoutingModule,
     CommonModule,
