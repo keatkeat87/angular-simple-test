@@ -1,1 +1,37 @@
-<p>test-stepper works!</p>
+<mat-horizontal-stepper linear #stepper>
+    <mat-step [stepControl]="formGroup.get('info')" [editable]="true">
+      <form [formGroup]="formGroup.get('info')">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput [formControl]="formGroup.get('info.name')">
+          <mat-error *ngIf="formGroup.get('info.name')!.hasError('required')" >Name is required</mat-error>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="formGroup.get('address')" [editable]="true">
+      <form [formGroup]="formGroup.get('address')">
+        <ng-template matStepLabel>Fill out your address</ng-template>
+        <mat-form-field>
+          <mat-label>Address1</mat-label>
+          <input matInput [formControl]="formGroup.get('address.address1')">
+          <mat-error *ngIf="formGroup.get('address.address1')!.hasError('required')" >Address1 is required</mat-error>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      You are now done.
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
