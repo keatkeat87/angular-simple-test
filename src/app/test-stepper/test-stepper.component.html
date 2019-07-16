@@ -1,6 +1,6 @@
 <mat-horizontal-stepper linear #stepper>
     <mat-step [stepControl]="formGroup.get('info')" [editable]="true">
-      <form [formGroup]="formGroup.get('info')">
+      <form [formGroup]="formGroup.get('info')" #ngForm="ngForm" >
         <ng-template matStepLabel>Fill out your name</ng-template>
         <mat-form-field>
           <mat-label>Name</mat-label>
@@ -8,8 +8,10 @@
           <mat-error *ngIf="formGroup.get('info.name')!.hasError('required')" >Name is required</mat-error>
         </mat-form-field>
         <div>
-          <button mat-button matStepperNext>Next</button>
+          <button type="button" mat-button matStepperNext>Next</button>
         </div>
+        <pre>{{ formGroup.get('info.name')!.touched }}</pre>
+        <pre>{{ ngForm.submitted }}</pre>
       </form>
     </mat-step>
     <mat-step [stepControl]="formGroup.get('address')" [editable]="true">
@@ -35,3 +37,4 @@
       </div>
     </mat-step>
   </mat-horizontal-stepper>
+  
