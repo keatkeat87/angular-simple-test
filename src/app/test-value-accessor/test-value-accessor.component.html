@@ -1,0 +1,8 @@
+<p>test-value-accessor works!</p>
+
+<form [formGroup]="formGroup" >
+  <input spellcheck="false" price [formControl]="formGroup.get('name')">
+  <input>
+</form>
+<pre>{{ formGroup.get('name').hasError('required') }}</pre>
+{{ formGroup.get('name').value }}
