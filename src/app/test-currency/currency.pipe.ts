@@ -2,7 +2,7 @@ import { Pipe, PipeTransform, ChangeDetectorRef } from '@angular/core';
 import { CurrencyService } from './currency.service';
 
 @Pipe({
-  name: 'currency'
+  name: 'sCurrency'
 })
 export class CurrencyPipe implements PipeTransform {
 
