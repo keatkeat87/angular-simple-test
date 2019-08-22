@@ -1,1 +1,22 @@
- 
+ <!-- <form [formGroup]="formGroup">
+   <mat-chip-list [formControl]="formGroup.get('subGroup')" aria-label="Fish selection">
+     <mat-chip value="OR" selectable>OR</mat-chip>
+     <mat-chip value="ORC" selectable>ORC</mat-chip>
+   </mat-chip-list>
+
+
+ </form> -->
+
+ <mat-chip-list [formControl]="formControl" aria-label="Fish selection">
+   <mat-chip>One fish</mat-chip>
+   <mat-chip>Two fish</mat-chip>
+   <mat-chip color="primary">Primary fish</mat-chip>
+   <mat-chip color="accent">Accent fish</mat-chip>
+ </mat-chip-list>
+
+ {{ formControl.value }}
+
+ <button (click)="0">go</button>
+
+
+ <!-- <pre>{{ formGroup.value | json }}</pre> -->

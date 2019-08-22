@@ -1,1 +1,7 @@
 <p>test-currency works!</p>
+<p>A: {{ 1200.50 | currency:'RM':'symbol':'1.2-4' }}</p>
+
+<mat-form-field class="example-full-width">
+  <input type="number" [formControl]="formControl" autocomplete="off" matInput placeholder="Favorite food" >
+</mat-form-field>
+{{ formControl.value }}

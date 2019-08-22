@@ -1,0 +1,11 @@
+  <mat-form-field>
+    <input autocomplete="off" [formControl]="formControl" type="number" matInput placeholder="demo" required >
+    <mat-error *ngIf="formControl.hasError('number')" >invalid number</mat-error>
+    <mat-error *ngIf="formControl.hasError('required')" >required</mat-error>
+    <mat-error *ngIf="formControl.hasError('decimal')" >decimal 2</mat-error>
+  </mat-form-field>
+
+
+  <mat-form-field>
+    <input autocomplete="off" [formControl]="emailFormControl" matInput type="email" placeholder="email">
+  </mat-form-field>

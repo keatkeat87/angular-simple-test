@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'test-currency', pathMatch: 'full' },
+  { path: '', redirectTo: 'simple', pathMatch: 'full' },
   { path: 'test-stepper', loadChildren: () => import('./test-stepper/test-stepper.module').then(m => m.TestStepperModule) },
   { path: 'simple', loadChildren: () => import('./simple/simple.module').then(m => m.SimpleModule) },
   // tslint:disable-next-line: max-line-length
@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'test-currency', loadChildren: () => import('./test-currency/test-currency.module').then(m => m.TestCurrencyModule) },
   { path: 'test-chart', loadChildren: () => import('./test-chart/test-chart.module').then(m => m.TestChartModule) },
   // tslint:disable-next-line: max-line-length
-  { path: 'test-router-matrix', loadChildren: () => import('./test-router-matrix/test-router-matrix.module').then(m => m.TestRouterMatrixModule) }
+  { path: 'test-router-matrix', loadChildren: () => import('./test-router-matrix/test-router-matrix.module').then(m => m.TestRouterMatrixModule) },
+  { path: 'test-decimal', loadChildren: () => import('./test-decimal/test-decimal.module').then(m => m.TestDecimalModule) }
 ];
 
 @NgModule({
