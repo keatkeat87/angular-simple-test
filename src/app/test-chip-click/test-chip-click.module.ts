@@ -1,25 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SimpleRoutingModule } from './simple-routing.module';
-import { SimpleComponent } from './simple.component';
+import { TestChipClickRoutingModule } from './test-chip-click-routing.module';
+import { TestChipClickComponent } from './test-chip-click.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatChipsModule } from '@angular/material/chips';
-import { HttpClientModule } from '@angular/common/http';
+import { SMatChipClickDirective } from './chip-click.directive';
 
 
 @NgModule({
-  declarations: [SimpleComponent],
+  declarations: [TestChipClickComponent, SMatChipClickDirective],
   imports: [
     CommonModule,
-    SimpleRoutingModule,
+    TestChipClickRoutingModule,
+    CommonModule,
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
-    MatChipsModule,
-    HttpClientModule
+    MatChipsModule
   ]
 })
-export class SimpleModule { }
+export class TestChipClickModule { }

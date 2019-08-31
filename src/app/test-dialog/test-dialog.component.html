@@ -1,0 +1,9 @@
+<button #button (click)="open(button)">open</button>
+
+<ng-template #dialogTemplate let-data>
+  <div class="card">
+    dialog template {{ data.value }}
+    <button (click)="open(button)" >close</button>
+  </div>
+</ng-template>
+

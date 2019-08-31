@@ -1,0 +1,11 @@
+@import "~@angular/material/theming";
+
+.card {
+  box-sizing: border-box;
+  margin:0px;
+  padding: 24px;
+  font-size: 13px;
+  line-height: 20px;
+  background: white;
+  @include mat-elevation(2);
+}

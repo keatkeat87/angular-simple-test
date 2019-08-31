@@ -1,0 +1,8 @@
+<mat-chip-list [formControl]="formControl" aria-label="Fish selection">
+  <mat-chip #chip1="matChip" [selectable]="!chip1.selected" (click)="chip1.selectable && chip1.toggleSelected(true)" >One fish</mat-chip>
+  <mat-chip #chip2="matChip" [selectable]="!chip2.selected" (click)="chip2.selectable && chip2.toggleSelected(true)" >Two fish</mat-chip>
+  <mat-chip #chip3="matChip" [selectable]="!chip3.selected" (click)="chip3.selectable && chip3.toggleSelected(true)" >Primary fish</mat-chip>
+  <mat-chip #chip4="matChip" [selectable]="!chip4.selected" (click)="chip4.selectable && chip4.toggleSelected(true)" >Accent fish</mat-chip>
+</mat-chip-list>
+
+<button (click)="0">go</button>
